@@ -1,3 +1,7 @@
+## Para usar o git bash e node no terminal
+- git init
+- node index.js (index.js é um ex do nome do arquivo que quero executar no terminal)
+- Depois disso, já consigo visualizar os console.log lá
 ## Linguagem de programação
 
 Maneira de dar instrução ao computador.
