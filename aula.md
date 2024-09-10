@@ -100,3 +100,11 @@ function start() {
 
 - para iniciar a função que criei acima, preciso chamá-la: 
 start()
+
+
+## Importando o npm (node package manager) (gerenciador de pacotes do node)
+
+- no console, digitar por ex:
+npm install inquirer
+
+(o inquirer é o pacote que eu quero baixar neste projeto)
