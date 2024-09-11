@@ -101,10 +101,33 @@ function start() {
 - para iniciar a função que criei acima, preciso chamá-la: 
 start()
 
+## Importando módulos Node.js
 
-## Importando o npm (node package manager) (gerenciador de pacotes do node)
+- Importação de módulos (require, CommomJS)
+- Biblioteca 'inquirer' para criar prompts interativos
+
+### Importando o npm (node package manager) (gerenciador de pacotes do node)
 
 - no console, digitar por ex:
 npm install inquirer
 
-(o inquirer é o pacote que eu quero baixar neste projeto)
+(o inquirer é o pacote/biblioteca que eu quero baixar neste projeto para criar prompts interativos)
+
+## Programação assíncrona e Promises:
+
+- Uso de funções assíncronas (async/await)
+- Sempre que eu tenho um await (aguardar), eu tenho uma função chamada de Promise (promessa)
+- Sempre que eu for utilizar uma função assíncrona (async) eu preciso de um await (aguardar)
+
+## Arrow Function
+- ex: const start = () => {}
+
+const: Essa palavra-chave em JavaScript declara uma constante, ou seja, uma variável cujo valor não pode ser reatribuído após sua inicialização.
+start: Este é o nome da constante. É comum usar nomes descritivos para facilitar a compreensão do código. Nesse caso, "start" sugere que essa constante provavelmente armazenará uma função relacionada ao início de alguma ação.
+=: O sinal de igualdade é o operador de atribuição, utilizado para atribuir um valor a uma variável ou constante.
+() => {}: Esta é uma sintaxe concisa para definir uma função arrow function em JavaScript.
+(): Os parênteses indicam que a função não recebe nenhum parâmetro.
+=>: A seta indica que estamos definindo uma função arrow.
+{}: As chaves delimitam o corpo da função, onde o código a ser executado é colocado.
+Em resumo:
+A linha de código const start = () => {} declara uma constante chamada "start" e atribui a ela uma função arrow que, no momento, não realiza nenhuma ação. Essa função pode ser chamada posteriormente no código para executar alguma lógica específica.*/
