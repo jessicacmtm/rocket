@@ -13,7 +13,7 @@ Como um lego, você irá utilizar peças para criar algoritmos, ou seja, para re
 - Declaração de variáveis (const, let)
 - Operadores (atribuição,  concatenação, matemáticos,lógicos)
 - Tipos de dados (string, number, boolean)
-- Estrutura de dados (functions, object, array)
+- Estrutura de dados (functions, object, array) (tbm são tipos de dados, mas são dados mais estruturados)
 - Controle de fluxo (if/else)
 - Estruturas de repetição (for, while)
 
@@ -39,7 +39,8 @@ Como um lego, você irá utilizar peças para criar algoritmos, ou seja, para re
 
 - Atribuição de valor: =
 - Operador de concatenação: +
-
+- De comparação == (é o equivalente a "= " na matematica normal), != (diferente)
+, >=, <= 
 ## Estruturas de dados
 
 ### Arrays: 
@@ -91,7 +92,8 @@ ex: console.log(metas[1].value);
 
 ## Condicionais
 
-- Switch - 
+- Switch (significa "troca")
+- If/Else (condicionais e controles de fluxo)
 
 ## criando uma função
 function start() {
