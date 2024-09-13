@@ -105,10 +105,17 @@ function start() {
 - para iniciar a função que criei acima, preciso chamá-la: 
 start()
 
-## Importando módulos Node.js
+## Mdulos Node.js
 
 - Importação de módulos (require, CommomJS)
 - Biblioteca 'inquirer' para criar prompts interativos
+- FS (File system)
+
+## JSON 
+- Javascript Object Notation (.json) // uma maneira de integrar arquivos json ao meu programa - neste em específico utilizamos para salvar as metas cadastradas.
+- JSON.parse() - JSON nativo do do JS -> transforma de JSON para JS
+- JSON.stringify() -> transforma de JS para JSON
+
 
 ### Importando o npm (node package manager) (gerenciador de pacotes do node)
 
