@@ -41,11 +41,13 @@ Como um lego, você irá utilizar peças para criar algoritmos, ou seja, para re
 - Operador de concatenação: +
 - De comparação == (é o equivalente a "= " na matematica normal), != (diferente)
 , >=, <= 
+- Spread operator: ... 
 ## Estruturas de dados
 
 ### Arrays: 
 - uma lista que contém qualquer tipo de dado
 fica entre []
+- Métodos de Array (são funções de array): push, [find, forEach, filter]: HOF (Higher Order Functions) toda HOF recebe uma função
 
 ### Objetos:
 - fica entre {}

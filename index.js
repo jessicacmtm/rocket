@@ -34,16 +34,16 @@ const listarMetas = async() => {
         instructions: false
     })
 
-    if(respostas.lenght == 0){
-        console.log("Nenhuma meta selecionada")
-        return
-    }
     metas.forEach((m) => {
         m.checked = false
     })
 
+    if(respostas.lenght == 0) {
+        console.log("Nenhuma meta selecionada")
+        return
+    }
     
-    respostas.forEach((resposta) =>{
+    respostas.forEach((resposta) => {
         const meta = metas.find((m) => {
             return m.value == resposta
         })
@@ -53,6 +53,67 @@ const listarMetas = async() => {
         
     
     console.log('Meta(s) marcadas como concluídas')
+}
+
+const metasRealizadas = async() => {
+
+    const realizadas = metas.filter((meta) => {
+        return meta.checked
+    })
+
+    if(realizadas.lenght == 0) {
+        console.log("Não existem metas realizadas!")
+        return
+    }
+
+    await select({
+        message: "Metas Realizadas " + realizadas.lenght,
+        choices: [...realizadas]
+    })
+}
+
+    const metasAbertas = async() => {
+        const abertas = metas.filter((meta) => {
+        return meta.checked != true
+    })
+
+    if (abertas.lenght == 0) {
+        console.log("Não existem metas abertas")
+        return
+    }
+
+    await select({
+        message: "Metas abertas " + abertas.length,
+        choices: [...abertas]
+    })
+
+}
+
+const deletarMetas = async () => {
+    const metasDesmarcadas = metas.map((meta) => {
+         return {value: meta.value, checked: false}
+    })
+
+    const itensADeletar = await checkbox({
+        message: "Selecione item para deletar",
+        choices: [...metasDesmarcadas],
+        instruction: false
+
+    })
+    
+    if (itensADeletar == 0) {
+        console.log("Nenhum item para deletar")
+        return
+        
+    }
+    itensADeletar.forEach ((item) => {
+        metas = metas.filter((meta) => {
+            return meta.value != item
+
+        })
+    })
+    
+    console.log("Meta(s) deletadas com sucesso!")
 }
 
 const start = async () => {
@@ -74,6 +135,18 @@ const start = async () => {
                     value: "listar"
                 },
                 {
+                    name: "Metas realizadas",
+                    value: "realizadas"
+                },
+                {
+                    name: "Metas abertas",
+                    value: "abertas"
+                },
+                {
+                    name: "Deletar metas",
+                    value: "deletar"
+                },
+                {
                     name: "sair",
                     value: 'sair'
                 }
@@ -87,9 +160,18 @@ const start = async () => {
             case "cadastrar":
                 await cadastrarMeta()
                 console.log(metas)
-
+                break
             case "listar":
                 await listarMetas()
+                break
+            case "realizadas":
+                await metasRealizadas()
+                break
+            case "abertas":
+                await metasAbertas()
+                break
+            case "deletar":
+                await deletarMetas()
                 break
             case "sair":
                 console.log('Até a próxima')
